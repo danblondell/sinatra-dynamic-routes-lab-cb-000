@@ -14,11 +14,11 @@ class App < Sinatra::Base
 
   get '/say/:number/:phrase' do
     params[:number].to_i.times do
-      "#{params[:phrase]}"
+      "#{params[:phrase].gsub('%20',' ')}"
     end
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
-    
+
   end
 end
