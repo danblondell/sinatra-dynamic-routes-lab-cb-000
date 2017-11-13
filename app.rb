@@ -29,7 +29,7 @@ class App < Sinatra::Base
     symbol = params[:operation]
 
     if symbol == "add"
-      "#{params[:number1].to_i} + #{params[:number2].to_i}"
+      "#{params[:number1].to_i} + params[:number2].to_i}"
     elsif symbol == "subtract"
       "#{params[:number1].to_i} - #{params[:number2].to_i}"
     elsif symbol == "multiply"
@@ -38,5 +38,5 @@ class App < Sinatra::Base
       "#{params[:number1].to_i} / #{params[:number2].to_i}"
     end
   end
-  
+
 end
