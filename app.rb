@@ -28,7 +28,12 @@ class App < Sinatra::Base
   get '/:operation/:number1/:number2' do
     symbol = params[:operation]
 
-    if symbol == add
+    if symbol == "add"
       "#{params[:number1].to_i} + #{params[:number2].to_i}"
+    elsif symbol == "subtract"
+      "#{params[:number1].to_i} - #{params[:number2].to_i}"
+    elsif symbol == "multiply"
+      "#{params[:number1].to_i} - #{params[:number2].to_i}"
+
   end
 end
